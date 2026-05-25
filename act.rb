@@ -5,21 +5,21 @@
 class Act < Formula
   desc "AWS Connect TUI - connect to EC2 instances via Session Manager"
   homepage "https://github.com/brunodasilvalenga/act"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.1/act_0.0.1_darwin_amd64.tar.gz"
-      sha256 "bdc6940e6a262450264508e09c1eff33b6cce66ca0a43cf363429ad04b527567"
+      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.2/act_0.0.2_darwin_amd64.tar.gz"
+      sha256 "07fe489b9c8382f771f050ab495d7a46f4781dbc0cdeb68ea2588f1e7e720502"
 
       define_method(:install) do
         bin.install "act"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.1/act_0.0.1_darwin_arm64.tar.gz"
-      sha256 "989039998c2f44bdf35c685fe9e250b666ea271b6d0c0bddfefae402d9aebe32"
+      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.2/act_0.0.2_darwin_arm64.tar.gz"
+      sha256 "d277dbd52ad8bb95d20eaeae8af40fdc31da80a3b185815ef1de566ccaac4294"
 
       define_method(:install) do
         bin.install "act"
@@ -29,15 +29,15 @@ class Act < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.1/act_0.0.1_linux_amd64.tar.gz"
-      sha256 "64432b2f3945eef05deeb0f973f97126b7ea5ca2f3c6151fa0cd6cf095bcc0de"
+      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.2/act_0.0.2_linux_amd64.tar.gz"
+      sha256 "c8eded6538beb8f78fb2f435f46d2cc0a07757e04ee922cb847a8ba4cfe63a6d"
       define_method(:install) do
         bin.install "act"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.1/act_0.0.1_linux_arm64.tar.gz"
-      sha256 "d304010626b69028af2710d86bece4e2d444ce857ae0b7ffdcc80dc3d99400db"
+      url "https://github.com/brunodasilvalenga/act/releases/download/v0.0.2/act_0.0.2_linux_arm64.tar.gz"
+      sha256 "43de9e784bdbb55df74afbb8e3d2488766d3fc87fda686d2fb142c55e1b73e87"
       define_method(:install) do
         bin.install "act"
       end
